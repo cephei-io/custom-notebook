@@ -1,10 +1,11 @@
 # Start from a core stack version
 FROM jupyter/datascience-notebook:latest
 
-# install a package into the default environment and cleanup after the installation
-RUN mamba install --quiet --yes flake8 pymongo tensorflow && \
-    mamba update --all && \
-    mamba clean --all -f -y && \
+# Install additional packages
+RUN mamba install --quiet --yes pymongo tensorflow
+
+# Update all packages
+RUN mamba update --all && mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
     
