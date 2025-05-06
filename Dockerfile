@@ -5,7 +5,7 @@ FROM jupyter/datascience-notebook:latest
 RUN mamba install --quiet --yes pymongo tensorflow
 
 # Update all packages
-RUN mamba update jupyterlab jupyterlab-git --yes && mamba clean --all -f -y && \
+RUN mamba update pexpect jupyterlab jupyterlab-git --yes && mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
     
