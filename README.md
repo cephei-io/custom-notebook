@@ -1,4 +1,4 @@
-# Datascience notebook docker image
+# Datascience notebook (Docker image)
 
 A notebook image for datascience with extra packages:
 - pymongo
