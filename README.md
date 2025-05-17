@@ -1,6 +1,6 @@
 # Datascience notebook (Docker image)
 
-A notebook image for datascience with extra packages:
+A docker image of a notebook instance for datascience with extra packages:
 - pymongo
 - PyMySQL
 - tensorflow
