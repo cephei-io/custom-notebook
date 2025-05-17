@@ -5,5 +5,3 @@ A notebook image for datascience with extra packages:
 - PyMySQL
 - tensorflow
 
-Image:
-rg.fr-par.scw.cloud/cephei-public/custom-notebook:latest
