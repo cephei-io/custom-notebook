@@ -10,6 +10,9 @@ RUN mamba install --quiet --yes tensorflow
 # Install Database packages
 RUN mamba install --quiet --yes pymongo PyMySQL
 
+# Install plotly[express]
+RUN mamba install --quiet --yes plotly[express]
+
 # Cleanup and fix permissions
 RUN mamba clean --all -f -y && \
     fix-permissions "${CONDA_DIR}" && \
