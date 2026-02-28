@@ -1,11 +1,11 @@
 # Start from a core stack version
-FROM jupyter/datascience-notebook:latest
+FROM quay.io/jupyter/datascience-notebook:python-3.12
 
 # Update some packages
 RUN mamba update pexpect jupyterlab jupyterlab-git --yes 
 
-# Install tensorflow
-RUN mamba install --quiet --yes tensorflow
+# Install tensorflow (CPU only)
+RUN mamba install --quiet --yes tensorflow-cpu
 
 # Install Database packages
 RUN mamba install --quiet --yes pymongo PyMySQL
